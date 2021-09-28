@@ -1,3 +1,10 @@
+```
+---
+layout: home
+title: MicroFPGA
+---
+```
+
 ## Tutorials
 
 ### Introduction
