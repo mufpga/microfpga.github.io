@@ -1,9 +1,7 @@
-```
 ---
 layout: home
 title: MicroFPGA
 ---
-```
 
 ## Tutorials
 
