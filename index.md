@@ -2,7 +2,7 @@
 
 ### Introduction
 
-- [MicroFPGA principle and signals](microfpga.md): a brief overview of MicroFPGA.
+- [MicroFPGA principle and signals](pages/general/principle.md): a brief overview of MicroFPGA.
 
 ### Installation tutorials
 
