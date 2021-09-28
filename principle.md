@@ -2,6 +2,8 @@
 
 MicroFPGA is an electronic platform generating signals that are commonly needed when controlling a microscope. It is based on the Au and Cu FPGAs (Alchitry).
 
+**GENERAL FIGURE here**
+
 The available signals are the following:
 
 | Name            | I/O    | Function                                                     | Default number |
@@ -14,6 +16,9 @@ The available signals are the following:
 
 
 
-**GENERAL FIGURE here**
-
-
+1. [Overview](principle.md)
+2. [Laser trigger](principle_trigger.md)
+3. [TTL](principle_ttl.md)
+4. [PWM](principle_pwm.md)
+5. [Servomotors](principle_servo,md)
+6. [Analog input](principle_ai.md)

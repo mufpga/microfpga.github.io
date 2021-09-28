@@ -4,35 +4,32 @@ title: Home
 
 # MicroFPGA documentation
 
-### Introduction
+Intro
 
-- [MicroFPGA principle and signals](principle.md): a brief overview of MicroFPGA.
+### Content
 
-### Installation tutorials
+1. [Principle](principle.md): overview and documentation of MicroFPGA and its components.
+2. [Installation guide](installation.md): step-by-step guide to set MicroFPGA up.
+3. [Resources](resources.md): Useful in-depth resources, including the electronics and the communication protocol.
+4. [Tutorials](tutorials.md): examples of source-code modifications to tailor MicroFPGA to specific needs.
 
-1. [Parts list](1_parts_list.md)
-2. [Installing and building MicroFPGA](2_installing_microfpga.md): uploading the FPGA firmware, step by step.
-3. [Communication interface](register_interface.md): summary of the communication interface.
-4. [Micro-Manager, Java and Python code](3_mm_java_python.md): loading MicroFPGA in Micro-Manager, Java and Python.
-5. [Wiring the FPGA with devices](4_wiring.md): notes on how to proceed to install MicroFPGA on the microscope.
+### Cite us
 
-### Resources
+If you use MicroFPGA, please cite us:
 
-- [Electronics](resource1_electronics.md): an overview of the electronics provided along MicroFPGA.
-- [Pins mapping](resource3_pins_br.md): summary of the default pin mapping for the Au and Cu.
-- [Application examples](resource5_application.md): how MicroFPGA is used on the Ries lab's microscopes.
+(Not yet available)
 
-### Modifying the source-code
+### Useful links
 
-- [Change the communication baud rate](tuto1_baudrate.md)
-- [Assign signal to another pin](tuto2_pins.md)
-- [Change signal addresses](tuto3_addresses.md)
-- [Change number of available signals](tuto4_number_signals.md)
-- [Change laser pulse duration resolution and maximum](tuto5_laser.md)
-- [Increase PWM resolution](tuto6_pwm.md)
-- [Change Servo signal period and resolution](tuto7_servo.md)
+- [MicroFPGA configuration for the FPGA](https://github.com/mufpga/MicroFPGA)
+- [MicroFPGA device adapter for Micro-Manager](https://github.com/mufpga/MicroFPGA-mm)
+- [MicroFPGA Java communication library](https://github.com/mufpga/MicroFPGA-java)
+- [MicroFPGA Python communication library](https://github.com/mufpga/MicroFPGA-py)
+- [MicroFPGA LabView example](https://github.com/mufpga/MicroFPGA-labview)
+- [MicroFPGA complementary electronics](https://github.com/mufpga/MicroFPGA-electronics)
+- [A Micro-Manager GUI used with MicroFPGA](https://github.com/jdeschamps/htSMLM)
+- [Ries lab repositories with compatible servomotor designs](https://github.com/ries-lab/RiesPieces)
 
-### Notes
+### Contact
 
-- [Analog input mapping](ai_mapping.md): an overview of how the analog input pins are mapped in the Au FPGA.
-
+Gitter? Image.sc? HT address
