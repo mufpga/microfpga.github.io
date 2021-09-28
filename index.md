@@ -1,9 +1,8 @@
 ---
-layout: home
-title: MicroFPGA
+title: Home
 ---
 
-## Tutorials
+# MicroFPGA documentation
 
 ### Introduction
 

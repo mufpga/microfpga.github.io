@@ -1,8 +1,3 @@
----
-layout: post
-title: Principle
----
-
 # Principle
 
 MicroFPGA is an electronic platform generating signals that are commonly needed when controlling a microscope. It is based on the Au and Cu FPGAs (Alchitry).
