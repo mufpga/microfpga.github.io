@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## Tutorials
 
-You can use the [editor on GitHub](https://github.com/mufpga/mufpga.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+### Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- [MicroFPGA principle and signals](microfpga.md): a brief overview of MicroFPGA.
 
-### Markdown
+### Installation tutorials
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. [Parts list](parts_list.md)
+2. [Installing and building MicroFPGA](installing_microfpga.md): uploading the FPGA firmware, step by step.
+3. [Communication interface](register_interface.md): summary of the communication interface.
+4. [Micro-Manager, Java and Python code](mm_java_python.md): loading MicroFPGA in Micro-Manager, Java and Python.
+5. [Wiring the FPGA with devices](wiring.md): notes on how to proceed to install MicroFPGA on the microscope.
 
-```markdown
-Syntax highlighted code block
+### Resources
 
-# Header 1
-## Header 2
-### Header 3
+- [Electronics](electronics.md): an overview of the electronics provided along MicroFPGA.
+- [Pins mapping](pins_br.md): summary of the default pin mapping for the Au and Cu.
+- [Application examples](application.md): how MicroFPGA is used on the Ries lab's microscopes.
 
-- Bulleted
-- List
+### Modifying the source-code
 
-1. Numbered
-2. List
+- [Change the communication baud rate](changing_baudrate.md)
+- [Assign signal to another pin](changing_pins.md)
+- [Change signal addresses](change_addresses.md)
+- [Change number of available signals](change_number_signals.md)
+- [Change laser pulse duration resolution and maximum](change_laser_duration.md)
+- [Increase PWM resolution](change_pwm_resolution.md)
+- [Change Servo signal period and resolution](change_servo_signal.md)
 
-**Bold** and _Italic_ and `Code` text
+### Notes
 
-[Link](url) and ![Image](src)
-```
+- [Analog input mapping](ai_mapping.md): an overview of how the analog input pins are mapped in the Au FPGA.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mufpga/mufpga.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
