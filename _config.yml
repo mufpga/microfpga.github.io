@@ -1,5 +1,6 @@
 theme: jekyll-theme-minimal
 title: MicroFPGA
-description: "A microscope control platform based on an FPGA.
-  Jump to <a href=\"/pages/general/principle.html\">Principle</a>"
+description: "A microscope control platform based on an FPGA.<br>
+	Jump to:
+	<br> <a href=\"principle.html\">Principle</a>"
 logo: /img/logo.png
