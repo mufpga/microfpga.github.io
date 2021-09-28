@@ -1,2 +1,4 @@
 theme: jekyll-theme-minimal
+title: MicroFPGA
+description: A microscope control platform based on an FPGA.
 logo: /img/logo.png
