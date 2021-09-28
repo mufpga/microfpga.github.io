@@ -28,7 +28,7 @@ twitter_username: None
 github_username:  jdeschamps
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
