@@ -34,3 +34,12 @@ Here is a summary table:
 The available auxiliary channels are indicated in bold. The second column is the hexadecimal addresses from the ADC manual. The "MicroFPGA channel" indicates the numbering of the MicroFPGA channels, while the physical pins (Au schematic, page 1) and the corresponding bank pin (Au schematic, page 2) are stated in the last two columns.
 
 Note that the dedicated analog channel (vp/vn) is currently not used in MicroFPGA.
+
+### Setting up the XADC in AlchitryLabs
+
+1. Click on "Project / Vivado IP Catalog"
+2. After a time a window opens, in "IP Catalog", double click on "FPGA Features and Design / XADC / XADC Wizard".
+3. In the newly opened window, select "Channel sequencer" in "Startup Channel Selection".
+4. In "Channel Sequencer", enable Vaux 4, 5, 6, 7, 12, 13, 14 and 15.
+5. Click "OK" and then "Generate".
+6. Once the "Design Run" complete, close Vivado. The new core is added to the Alchitry project.
