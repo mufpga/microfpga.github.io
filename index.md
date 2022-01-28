@@ -8,10 +8,17 @@ Intro
 
 ### Content
 
-1. [Principle](principle.md): overview and documentation of MicroFPGA and its components.
-2. [Installation guide](installation.md): step-by-step guide to set MicroFPGA up.
-3. [Resources](resources.md): Useful in-depth resources, including the electronics and the communication protocol.
-4. [Tutorials](tutorials.md): examples of source-code modifications to tailor MicroFPGA to specific needs.
+1. [Principle](principle.md): 
+	overview and documentation of MicroFPGA and its components.
+2. [Installation guide](installation.md): 
+	step-by-step guide to set MicroFPGA up.
+3. [Resources](resources.md): 
+	useful in-depth resources, including the electronics and the communication protocol.
+4. [Tutorials](tutorials.md): 
+	examples of source-code modifications to tailor MicroFPGA to specific needs.
+
+
+- 
 
 ### Cite us
 
