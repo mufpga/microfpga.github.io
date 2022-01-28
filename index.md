@@ -9,11 +9,6 @@ MicroFPGA is an FPGA-based platform for the electronic control of microscopes. I
 ### Content
 
 1. [Principle](principle.md)
-	1. [Camera and laser trigger](principle_trigger.md)
-	2. [TTL](principle_ttl.md)
-	3. [PWM](principle_pwm.md)
-	4. [Servomotors](principle_servo,md)
-	5. [Analog input](principle_ai.md)
 2. [Installation guide](installation.md)
 3. [Resources](resources.md)
 4. [Tutorials](tutorials.md)
@@ -21,14 +16,20 @@ MicroFPGA is an FPGA-based platform for the electronic control of microscopes. I
 
 ### Related repositories
 
-- [MicroFPGA configuration for the FPGA](https://github.com/mufpga/MicroFPGA)
-- [MicroFPGA device adapter for Micro-Manager](https://github.com/mufpga/MicroFPGA-mm)
-- [MicroFPGA Java communication library](https://github.com/mufpga/MicroFPGA-java)
-- [MicroFPGA Python communication library](https://github.com/mufpga/MicroFPGA-py)
-- [MicroFPGA LabView example](https://github.com/mufpga/MicroFPGA-labview)
-- [MicroFPGA complementary electronics](https://github.com/mufpga/MicroFPGA-electronics)
-- [A Micro-Manager GUI used with MicroFPGA](https://github.com/jdeschamps/htSMLM)
+MicroFPGA is divided into multiple repositories:
+
+- [FPGA configuration](https://github.com/mufpga/MicroFPGA)
+- [Micro-Manager device adapter](https://github.com/mufpga/MicroFPGA-mm)
+- [Java library](https://github.com/mufpga/MicroFPGA-java)
+- [Python package](https://github.com/mufpga/MicroFPGA-py)
+- [LabView library](https://github.com/mufpga/MicroFPGA-labview)
+- [Complementary electronics](https://github.com/mufpga/MicroFPGA-electronics)
+
+Additionally, MicroFPGA can be used together with other projects:
+
+- [A Micro-Manager GUI](https://github.com/jdeschamps/htSMLM)
 - [Ries lab repositories with compatible servomotor designs](https://github.com/ries-lab/RiesPieces)
+- [A custom LaserEngine triggered by MicroFPGA](https://github.com/ries-lab/LaserEngine)
 
 <!--- 
 ### Cite us

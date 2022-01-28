@@ -1,13 +1,13 @@
 
 # MicroFPGA principle
 
-MicroFPGA is an electronic platform generating signals that are commonly needed when controlling a microscope. It is based on the Au and Cu FPGAs (Alchitry).
+MicroFPGA is based on the Au, Au+ and Cu FPGAs from [Alchitry](https://alchitry.com/). Once configured, the FPGA is capable of generating a certain number of signals, as well as reading analog signals (Au and Au+). 
 
 **SUMMARY FIGURE**
 
 The available signals are the following:
 
-| Name           | I/O         | Function                                                     | Default number |
+| Name           | I/O         | Summary                                                     | Default number |
 | -------------- | ----------- | :----------------------------------------------------------- | :------------: |
 | Camera trigger | Input/Ouput | In PASSIVE mode, the FPGA receives a signal from the camera in order to trigger the lasers, in ACTIVE mode it generates a fire signal for the camera and can trigger the lasers similarly to the PASSIVE mode. |   1 (fixed)    |
 | Laser trigger  | Output      | Triggering lasers based on the processing of an exposure signal. Can be used for pattern triggering and/or laser pulsing. |       8        |
@@ -17,6 +17,7 @@ The available signals are the following:
 | Analog         | Input       | Analog inputs are limited to 0-1 V and can be used to monitor signals from the microscope, e.g. temperature, laser position, laser power... |   8 (fixed)    |
 
 
+More details about each type of signal can be found in their respective page:
 
 1. [Camera and laser trigger](principle_trigger.md)
 2. [TTL](principle_ttl.md)
