@@ -1,26 +1,24 @@
 # Electronics
 
-In order to use MicroFPGA with downstream devices, voltage conversion is sometimes necessary. Indeed, MicroFPGA present the following limitations:
+In order to use MicroFPGA with downstream devices, voltage conversion is sometimes necessary. Indeed, Alchitry FPGAs present the following limitations:
 
 - Output voltages are limited to 3.3 V.
 - Digital inputs must be smaller than 3.3 V.
 - No analog output signals natively.
-- Analog input voltages are measured up to 1 V and must be smaller than 1.8 V (Au FPGA).
-
-:warning: **If higher voltages are supplied, the FPGA can be irreversibly damaged.** :warning: 
+- Analog input voltages are measured up to 1 V and must be smaller than 1.8 V (Au/Au+ FPGA). **If higher voltages are supplied, the FPGA can be irreversibly damaged.**
 
 Here, we provide two custom electronic boards to convert voltages to acceptable levels for the FPGA or downstream devices:
 
-- [Signal conversion board](https://github.com/jdeschamps/MicroFPGA/tree/master/Electronics/Signal_conversion): multi-channel electronics allowing conversion of 3.3 V signals to 5 V, or inversely, with the option to low-pass the input signal in order to produce an analog signal output from a PWM (pulse-width modulation) input.
-- [Analog conversion board](https://github.com/jdeschamps/MicroFPGA/tree/master/Electronics/Analog_conversion): multi-channel electronics converting 10 V or 5 V analog signals to 1 V, with the option to cap the maximum voltage to 1.6 V.
+- [Signal conversion board](https://github.com/mufpga/MicroFPGA-electronics/Signal_conversion_board): multi-channel electronics allowing conversion of 3.3 V signals to 5 V, or inversely, with the option to low-pass the input signal in order to produce an analog signal output from a PWM (pulse-width modulation) input.
+- [Analog conversion board](https://github.com/mufpga/MicroFPGA-electronics/Analog_conversion_board): multi-channel electronics converting 10 V or 5 V analog signals to 1 V, with the option to cap the maximum voltage to 1.6 V.
 
 ### Signal conversion board
 
-![Signal conversion board](images/Signal_conversion_small.jpg)
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Signal_conversion_board/SCB.jpg" alt="AlchitryLoader" width="100"/>
 
 #### Channels
 
-The [signal conversion board](https://github.com/jdeschamps/MicroFPGA/tree/master/Electronics/Signal_conversion) is composed of 8 channels:
+The [signal conversion board](https://github.com/mufpga/MicroFPGA-electronics/Signal_conversion_board) is composed of 8 channels:
 
 - 4 voltage conversion channels with optional low-pass filter.
 - 4 bidirectional voltage conversion channels.
@@ -29,7 +27,7 @@ The channels only differ by the analog detour option. For the conversion channel
 
 In order to choose the input and output voltages, refer to the channel header:
 
-<img src="images/Signal_conversion_channel.jpg" alt="Signal conversion channel" style="zoom: 100%;" />
+![Signal conversion board](https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Signal_conversion_board/SCB_channel.jpg)
 
 The channel header allows choosing the following parameters:
 
@@ -44,7 +42,7 @@ The board is powered by a 5 V power supply (1 A). We typically use the same exte
 
 #### Folder content
 
-The [signal conversion board folder](https://github.com/jdeschamps/MicroFPGA/tree/master/Electronics/Signal_conversion) contains the following subfolders:
+The [signal conversion board folder](https://github.com/mufpga/MicroFPGA-electronics/Signal_conversion_board) contains the following subfolders:
 
 - Altium project: complete project generated with Altium 17.1.9 (Build 592).
 - BOM: bill of materials exported from the Altium project.
@@ -66,13 +64,13 @@ The [signal conversion board folder](https://github.com/jdeschamps/MicroFPGA/tre
 
 ### Analog conversion board
 
-![Analog conversion board](images/Analog_conversion_small.jpg)
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Analog_conversion_board/ACB.jpg" alt="AlchitryLoader" width="100"/>
 
 #### Channels
 
-Since the Au FPGA analog input are limited to the 0-1 V range and are only safe up to 1.6 V, an additional circuit is necessary to convert commonly encountered 5 and 10 V inputs. The [analog conversion board](https://github.com/jdeschamps/MicroFPGA/tree/master/Electronics/Analog_conversion) is composed of 8 channels allowing 1/10 or 1/5 voltage conversion. Additionally, the voltage and current limit can be disabled.
+Since the Au FPGA analog input are limited to the 0-1 V range and are only safe up to 1.6 V, an additional circuit is necessary to convert commonly encountered 5 and 10 V inputs. The [analog conversion board](https://github.com/mufpga/MicroFPGA-electronics/Analog_conversion_board) is composed of 8 channels allowing 1/10 or 1/5 voltage conversion. Additionally, the voltage and current limit can be disabled.
 
-<img src="images/Analog_conversion_channel.jpg" alt="Analog conversion channel" style="zoom:100%;" />
+![Signal conversion board](https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Analog_conversion_board/ACB_channel.jpg)
 
 Each channel header present options that need to be jumped:
 
@@ -88,7 +86,7 @@ The board is powered by a 12 V power supply (1 A).
 
 #### Folder content
 
-The [analog conversion board](https://github.com/jdeschamps/MicroFPGA/tree/master/Electronics/Analog_conversion) contains the following subfolders:
+The [analog conversion board](https://github.com/mufpga/MicroFPGA-electronics/Analog_conversion_board) contains the following subfolders:
 
 - Altium project: complete project generated with Altium 17.1.9 (Build 592).
 - BOM: bill of materials exported from the Altium project.
@@ -100,7 +98,7 @@ The [analog conversion board](https://github.com/jdeschamps/MicroFPGA/tree/maste
 
 If a sensor on the microscope has an analog output comprised between 0 and 10 V, feeding it directly to the Au FPGA will saturate the read-out channel. Therefore, the signal is set as input of the conversion board, with the 1/10 option selected as well as the "voltage and current limitation" one. The output of the channel is then safe to be wired to the FPGA and the will allow reading out the signal.
 
-
+Examples of applications are for instance monitoring the [laser power meters](https://github.com/ries-lab/RiesPieces/tree/master/Electronics/Powermeter) or the [focus of the microscope](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Focus-locking). 
 
 
 
