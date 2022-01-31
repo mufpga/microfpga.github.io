@@ -1,15 +1,15 @@
-# Default layout Au+Br
+# Default layout Au/Au+ and Br
 
-The following table represent the output pins of the Au FPGA used with the [Br breaking board](https://alchitry.com/collections/all/products/alchitry-br). You can find the reference sheet of the Br board [here](https://cdn.alchitry.com/docs/Br%20Element%20Reference.pdf).
+The following table represent the output pins of the Au FPGA used with the [Br breaking board](https://www.sparkfun.com/products/16524). You can find the reference sheet of the Br board [here](https://cdn.alchitry.com/docs/Br%20Element%20Reference.pdf).
 
 The pin numbers are indicated in between parentheses:
 
-| Bank A |             |              |              |        |        |        |        |               |
-| :----: | :---------: | :----------: | :----------: | :----: | :----: | :----: | :----: | :-----------: |
-|   R    | **S3** (48) | **S4** (45)  | **P0** (42)  | - (39) | - (36) | - (33) | - (30) | **TTL0** (27) |
-|  GND   | **S2** (49) | **S5** (46)  | **P1** (43)  | - (40) | - (37) | - (34) | - (31) | **TTL1** (28) |
-|   +V   | **S1** (3)  |  **S6** (6)  | **TTL2** (9) | - (12) | - (15) | - (18) | - (21) |    - (24)     |
-|  GND   | **S0** (2)  | **TTL4** (5) | **TTL3** (8) | - (11) | - (14) | - (17) | - (20) |    - (23)     |
+| Bank A |             |                 |              |        |        |        |        |               |
+| :----: | :---------: | :-------------: | :----------: | :----: | :----: | :----: | :----: | :-----------: |
+|   R    | **S3** (48) |   **S4** (45)   | **P0** (42)  | - (39) | - (36) | - (33) | - (30) | **TTL0** (27) |
+|  GND   | **S2** (49) |   **S5** (46)   | **P1** (43)  | - (40) | - (37) | - (34) | - (31) | **TTL1** (28) |
+|   +V   | **S1** (3)  |   **S6** (6)    | **TTL2** (9) | - (12) | - (15) | - (18) | - (21) |    - (24)     |
+|  GND   | **S0** (2)  | **Cam out** (5) | **TTL3** (8) | - (11) | - (14) | - (17) | - (20) |    - (23)     |
 
 | Bank B |               |               |        |        |        |               |               |               |
 | :----: | :-----------: | :-----------: | :----: | :----: | :----: | :-----------: | :-----------: | :-----------: |
@@ -18,12 +18,12 @@ The pin numbers are indicated in between parentheses:
 |   +V   | **AI7P** (3)  | **AI6P** (6)  | - (9)  | - (12) | - (15) | **AI1P** (18) | **AI4P** (21) | **AI0P** (24) |
 |  GND   | **AI7N** (2)  | **AI6N** (5)  | - (8)  | - (11) | - (14) | **AI1N** (17) | **AI4N** (20) | **AI0N** (23) |
 
-| Bank C |             |             |             |        |        |        |        |        |
-| :----: | :---------: | :---------: | :---------: | :----: | :----: | :----: | :----: | :----: |
-|  GND   | **L3** (49) | **L4** (46) | **P2** (43) | + (40) | + (37) | + (34) | + (31) | + (28) |
-|   +V   | **L2** (48) | **L5** (45) | **P3** (42) | + (39) | + (36) | + (33) | + (30) | + (27) |
-|  GND   | **L1** (2)  | **L6** (5)  | **P4** (8)  | + (11) | + (14) | + (17) | + (20) | + (23) |
-|  Raw   | **L0** (3)  | **L7** (6)  | **Cam** (9) | + (12) | + (15) | + (18) | + (21) | + (24) |
+| Bank C |             |             |                |        |        |        |        |        |
+| :----: | :---------: | :---------: | :------------: | :----: | :----: | :----: | :----: | :----: |
+|  GND   | **L3** (49) | **L4** (46) |  **P2** (43)   | + (40) | + (37) | + (34) | + (31) | + (28) |
+|   +V   | **L2** (48) | **L5** (45) |  **P3** (42)   | + (39) | + (36) | + (33) | + (30) | + (27) |
+|  GND   | **L1** (2)  | **L6** (5)  |   **P4** (8)   | + (11) | + (14) | + (17) | + (20) | + (23) |
+|  Raw   | **L0** (3)  | **L7** (6)  | **Cam in** (9) | + (12) | + (15) | + (18) | + (21) | + (24) |
 
 | Bank D |      |      |        |        |      |      |         |      |
 | :----: | :--: | :--: | :----: | :----: | :--: | :--: | :-----: | :--: |
@@ -34,7 +34,7 @@ The pin numbers are indicated in between parentheses:
 
 **S**: servomotor outputs
 
-**TTL**: ttl outputs
+**TTL**: TTL outputs
 
 **AIXP**: positive pole of the analog input X
 
@@ -44,7 +44,7 @@ The pin numbers are indicated in between parentheses:
 
 **L**: laser trigger outputs
 
-**Cam**: camera trigger input
+**Cam**: camera trigger input/output
 
 **GND**: ground
 
@@ -58,24 +58,22 @@ The pin numbers are indicated in between parentheses:
 
 **x**: unavailable or unused pins
 
-Note that because the analog input pins on the Au run at 1.8 V (I/O standard LVCMOS18), all pins connected to bank 35 (see [Au design](https://alchitry.com/products/alchitry-au-fpga-development-board)) have to be configured with the same I/O standard. They are indicated here with "-" and therefore will not work with hardware expecting a 3.3 V or 5 V digital logic.
+Note that because the analog input pins on the Au run at 1.8 V (I/O standard LVCMOS18), all pins connected to bank 35 (see [Au design](https://www.sparkfun.com/products/16527)) have to be configured with the same I/O standard. They are indicated here with "-" and therefore will not work with hardware expecting a 3.3 V or 5 V digital logic.
 
-Pins are defined in the [user constraint file](https://github.com/jdeschamps/MicroFPGA/blob/master/Au_firmware/constraint/user.acf).
+Pins are defined in the [user constraint file](https://github.com/mufpga/MicroFPGA/blob/main/Au/constraint/user.acf).
 
-
-
-# Default layout Cu+Br
+# Default layout Cu and Br
 
 The following table represent the output pins of the Cu FPGA used with the [Br breaking board](https://alchitry.com/collections/all/products/alchitry-br). You can find the reference sheet of the Br board [here](https://cdn.alchitry.com/docs/Br%20Element%20Reference.pdf).
 
 The pin numbers are indicated in between parentheses:
 
-| Bank A |             |              |              |        |        |        |        |               |
-| :----: | :---------: | :----------: | :----------: | :----: | :----: | :----: | :----: | :-----------: |
-|   R    | **S3** (48) | **S4** (45)  | **P0** (42)  | + (39) | + (36) | + (33) | + (30) | **TTL0** (27) |
-|  GND   | **S2** (49) | **S5** (46)  | **P1** (43)  | + (40) | + (37) | + (34) | + (31) | **TTL1** (28) |
-|   +V   | **S1** (3)  |  **S6** (6)  | **TTL2** (9) | + (12) | + (15) | + (18) | + (21) |    + (24)     |
-|  GND   | **S0** (2)  | **TTL4** (5) | **TTL3** (8) | + (11) | + (14) | + (17) | + (20) |    + (23)     |
+| Bank A |             |                 |              |        |        |        |        |               |
+| :----: | :---------: | :-------------: | :----------: | :----: | :----: | :----: | :----: | :-----------: |
+|   R    | **S3** (48) |   **S4** (45)   | **P0** (42)  | + (39) | + (36) | + (33) | + (30) | **TTL0** (27) |
+|  GND   | **S2** (49) |   **S5** (46)   | **P1** (43)  | + (40) | + (37) | + (34) | + (31) | **TTL1** (28) |
+|   +V   | **S1** (3)  |   **S6** (6)    | **TTL2** (9) | + (12) | + (15) | + (18) | + (21) |    + (24)     |
+|  GND   | **S0** (2)  | **Cam out** (5) | **TTL3** (8) | + (11) | + (14) | + (17) | + (20) |    + (23)     |
 
 | Bank B |        |        |        |        |        |        |        |        |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
@@ -84,12 +82,12 @@ The pin numbers are indicated in between parentheses:
 |   +V   | + (3)  | + (6)  | + (9)  | + (12) | + (15) | + (18) | + (21) | + (24) |
 |  GND   | + (2)  | + (5)  | + (8)  | + (11) | + (14) | + (17) | + (20) | + (23) |
 
-| Bank C |             |             |             |        |      |      |      |      |
-| :----: | :---------: | :---------: | :---------: | :----: | :--: | :--: | :--: | :--: |
-|  GND   | **L3** (49) | **L4** (46) | **P2** (43) | + (40) |  x   |  x   |  x   |  x   |
-|   +V   | **L2** (48) | **L5** (45) | **P3** (42) | + (39) |  x   |  x   |  x   |  x   |
-|  GND   | **L1** (2)  | **L6** (5)  | **P4** (8)  | + (11) |  x   |  x   |  x   |  x   |
-|  Raw   | **L0** (3)  | **L7** (6)  | **Cam** (9) |   x    |  x   |  x   |  x   |  x   |
+| Bank C |             |             |                |        |      |      |      |      |
+| :----: | :---------: | :---------: | :------------: | :----: | :--: | :--: | :--: | :--: |
+|  GND   | **L3** (49) | **L4** (46) |  **P2** (43)   | + (40) |  x   |  x   |  x   |  x   |
+|   +V   | **L2** (48) | **L5** (45) |  **P3** (42)   | + (39) |  x   |  x   |  x   |  x   |
+|  GND   | **L1** (2)  | **L6** (5)  |   **P4** (8)   | + (11) |  x   |  x   |  x   |  x   |
+|  Raw   | **L0** (3)  | **L7** (6)  | **Cam in** (9) |   x    |  x   |  x   |  x   |  x   |
 
 | Bank D |      |      |      |      |      |      |      |      |
 | :----: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -106,7 +104,7 @@ The pin numbers are indicated in between parentheses:
 
 **L**: laser trigger outputs
 
-**Cam**: camera trigger input
+**Cam**: camera trigger input/output
 
 **GND**: ground
 
@@ -118,4 +116,4 @@ The pin numbers are indicated in between parentheses:
 
 **x**: unavailable or unused pins
 
-Pins are defined in the [user constraint file](https://github.com/jdeschamps/MicroFPGA/blob/master/Cu_firmware/constraint/user.acf).
+Pins are defined in the [user constraint file](https://github.com/mufpga/MicroFPGA/blob/main/Cu/constraint/user.acf).
