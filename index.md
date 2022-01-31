@@ -12,7 +12,6 @@ MicroFPGA is an FPGA-based platform for the electronic control of microscopes. I
 2. [Installation guide](installation.md)
 3. [Resources](resources.md)
 4. [Tutorials](tutorials.md)
-	
 
 ### Related repositories
 
