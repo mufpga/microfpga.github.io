@@ -1,6 +1,6 @@
 ### Servomotor
 
-Servomotors are 
+Servomotors are actuators that can be used to move microscope elements with high precision. Affordable servomotors are a good alternative to expensive devices. For instance, they can be used to power a filter wheel or move elements in and out of the optical path. See [examples from the Ries lab](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy):
 
 ![flip_mount_small](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Flip_mount/flip_mount_small.JPG)![3D_printed_fw_small](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Filter_wheel/3D_printed_fw_small.JPG)![rail_servo_small](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Linear_stage/rail_servo_small.JPG)
 

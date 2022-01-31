@@ -22,5 +22,5 @@ More details about each type of signal can be found in their respective page:
 1. [Camera and laser trigger](principle_trigger.md)
 2. [TTL](principle_ttl.md)
 3. [PWM](principle_pwm.md)
-4. [Servomotors](principle_servo,md)
+4. [Servomotors](principle_servo.md)
 5. [Analog input](principle_ai.md)
