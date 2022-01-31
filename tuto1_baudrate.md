@@ -11,7 +11,7 @@ uart_rx rx (#BAUD(9600), #CLK_FREQ(100000000)); // serial receiver
 uart_tx tx (#BAUD(9600), #CLK_FREQ(100000000)); // serial transmitter
 ```
 
-Compile the firmware and update the FPGA (see [Installing and building MicroFPGA](2_installing_microfpga.md) for a walkthrough).
+Compile the firmware and update the FPGA (see [installing and building MicroFPGA](2_installing_microfpga.md) for a walkthrough).
 
 ### Changing the baud rate in the Java and Python libraries
 

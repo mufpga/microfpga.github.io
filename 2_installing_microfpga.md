@@ -12,7 +12,7 @@
 
 4. MicroFPGA is ready to be used!
 
-### Building MicroFPGA
+### Building MicroFPGA configuration
 
 In order to build MicroFPGA, the source code and FPGA builders must be installed.
 
