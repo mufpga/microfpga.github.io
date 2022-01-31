@@ -73,10 +73,10 @@ The ACTIVE mode has several parameters that allow users to define both *fire* an
 
 | Parameter |     Signal      |  Range  |                         Description                          |
 | :-------: | :-------------: | :-----: | :----------------------------------------------------------: |
-|  period   |   fire signal   | 0-65535 | Period of the *fire signal* ranging from 0 to 6553,5 ms (in steps of 0.1 ms) |
-|   pulse   |   fire signal   | 0-65535 | Pulse length of the *fire signal* up to 6553,5 ms (in steps of 0.1 ms) |
-| exposure  | exposure signal | 0-65535 | Length of the *exposure signal* up to 6553,5 ms (in steps of 0.1 ms) |
-|   delay   | exposure signal | 0-65535 | Delay between *fire* and *exposure signals*, rangin from 0 to 655,35 ms (in steps of 0.01 ms) |
+|  period   |   fire signal   | 0-65535 | Period of the *fire signal* ranging from 0 to 6553.5 ms (in steps of 0.1 ms) |
+|   pulse   |   fire signal   | 0-65535 | Pulse length of the *fire signal* up to 6553.5 ms (in steps of 0.1 ms) |
+| exposure  | exposure signal | 0-65535 | Length of the *exposure signal* up to 6553.5 ms (in steps of 0.1 ms) |
+|   delay   | exposure signal | 0-65535 | Delay between *fire* and *exposure signals*, rangin from 0 to 655.35 ms (in steps of 0.01 ms) |
 
 Note the followoing edge cases:
 
