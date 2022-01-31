@@ -1,8 +1,8 @@
 ## Change servo signal
 
-### Change signal
+### Change signal parameters
 
-Most servomotors obey to the standard PWM signal of period 20 ms and pulse length between 1 and 2 ms. Should you need a different signal, it can be modified in the servo_standard.luc file (line 14):
+Most servomotors obey to the standard PWM signal of period 20 ms and pulse length between 1 and 2 ms. Should you need a different signal, it can be modified in the servo_standard.luc file (line 18):
 
 ```verilog
 const MIN_T = 1; // min pulse (ms)  
@@ -10,17 +10,17 @@ const MAX_T = 2; // max pulse (ms)
 const PERIOD = 20; // period (ms)  
 ```
 
-Note that this will affect the signal for all servos. In order to have servos with the standard and with the modified parameters, you will need to duplicate the servo_standard.luc file in the MicroAu or MicroCu project (e.g. servo_standard_2.luc), create instance of the duplicated module in au_top.luc or cu_top.luc and allocate the inputs and outputs. Example for two servos with the modified parameters:
+Note that this will affect the signal for all servos. In order to have servos with the standard and with the modified parameters, you will need to duplicate the servo_standard.luc file in the Au/Au+/Cu project (e.g. create a servo_standard_unconv.luc), create instance of the duplicated module in the *_top.luc file and allocate the inputs and outputs. Example for two servos with the modified parameters:
 
-au_top.luc (line 109):
+au__top.luc (line 132):
 
 ```verilog
 // declaration
 servo_standard servo_controller[NUM_SERVOS-2];
-servo_standard_2 servo_controller_2[2]; // servo signals with new parameters
+servo_standard_unconv servo_controller_2[2]; // servo signals with new parameters
 ```
 
-au_top.luc (line 229):
+au_top.luc (line 323):
 
 ```verilog
 // input/output assignments
@@ -33,7 +33,7 @@ servo_sig.signal_in[1:0] = servo_controller_2.servo;
 
 ### Change switch-off delay
 
-In servo_stop.luc (line 16):
+In servo_stop.luc (line 20):
 
 ```verilog
 dff count_sig[30]; // count until ~ 10 sec @ 100MHz
