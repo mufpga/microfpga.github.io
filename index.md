@@ -6,6 +6,8 @@ title: Home
 
 MicroFPGA is an FPGA-based platform for the electronic control of microscopes. It aims at using affordable FPGA to generate or read signals from a variety of devices, including cameras, lasers, servomotors, filter-wheels, etc. It can be controlled via [Micro-Manager](https://micro-manager.org/), or its Java, Python and LabView communication libraries. 
 
+<img src="img/box_small.jpg" alt="Complete MicroFPGA box" width="250"/>
+
 ### Content
 
 1. [Principle](principle.md)
@@ -40,3 +42,5 @@ If you use MicroFPGA, please cite us:
 ### Contact
 
 If you have any question, contact us via the [Image.sc](image.sc) forum (tag @jdeschamps or by PMs) or by email joran.deschamps[/at/]fht.org.
+
+MicroFPGA and the Micro-Manager/Python/Java libraries were written by Joran Deschamps, EMBL (2020). The custom electronic boards and the LabView example were developed by Christian Kieser (Electronic Workshop, EMBL).

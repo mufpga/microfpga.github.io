@@ -12,7 +12,7 @@ Here, we provide two custom electronic boards to convert voltages to acceptable 
 - [Signal conversion board](https://github.com/mufpga/MicroFPGA-electronics/Signal_conversion_board): multi-channel electronics allowing conversion of 3.3 V signals to 5 V, or inversely, with the option to low-pass the input signal in order to produce an analog signal output from a PWM (pulse-width modulation) input.
 - [Analog conversion board](https://github.com/mufpga/MicroFPGA-electronics/Analog_conversion_board): multi-channel electronics converting 10 V or 5 V analog signals to 1 V, with the option to cap the maximum voltage to 1.6 V.
 
-### Signal conversion board
+## Signal conversion board
 
 <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Signal_conversion_board/SCB.jpg" alt="AlchitryLoader" width="100"/>
 
@@ -62,7 +62,7 @@ The [signal conversion board folder](https://github.com/mufpga/MicroFPGA-electro
 
 
 
-### Analog conversion board
+## Analog conversion board
 
 <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Analog_conversion_board/ACB.jpg" alt="AlchitryLoader" width="100"/>
 
@@ -100,6 +100,12 @@ If a sensor on the microscope has an analog output comprised between 0 and 10 V,
 
 Examples of applications are for instance monitoring the [laser power meters](https://github.com/ries-lab/RiesPieces/tree/master/Electronics/Powermeter) or the [focus of the microscope](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Focus-locking). 
 
+## Electronic box
 
+The FPGA and the complementary boxes can be assembled into a complete box:
 
-Both electronic boards were designed by Christian Kieser (Electronic workshop, EMBL).
+<img src="img/box_small.jpg" alt="Complete MicroFPGA box" width="700"/>
+
+This particular example is housed in [MicroFPGA electronics repository](https://github.com/mufpga/MicroFPGA-electronics).
+
+Both electronic boards and box side panels were designed by Christian Kieser (Electronic workshop, EMBL). 
