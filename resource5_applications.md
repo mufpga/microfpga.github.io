@@ -8,18 +8,18 @@ Several microscopes are equiped with MicroFPGA together with [Micro-Manager](htt
 
 ## Tested devices
 
-| Device type  |                            Device                            |               Signal               | Electronics |
-| :----------: | :----------------------------------------------------------: | :--------------------------------: | :---------: |
-|    Camera    |                   Photometrics Evolve 512                    |            Camera (in)             |     SCB     |
-|    Camera    | Hamamatsu ORCA-Flash4.0 V2,<br />ORCA-Quest and ORCA-Fusion BT<br />PCO edge 4.2 and 4.2bi<br />Andor iXon Ultra 897 |            Camera (in)             |    None     |
-|    Camera    |                  Hamamatsu ORCA-Flash4.0 V2                  |            Camera (out)            |    None     |
-|    Laser     | Toptica iChrome MLE and iBeamSmart<br />Omicron LightHUB<br />Oxxius LBX-405<br /><br />LaserQuantum gem 561<br />MPB Communications F-04306-107 and F-04-306-102 |        Laser trigger (out)         |    None     |
-|    Laser     | Custom laser engine ([link](https://github.com/ries-lab/LaserEngine)) | Laser trigger (out)<br />PWM (out) |    None     |
-| Light source |                         LED switches                         |             TTL (out)              |    None     |
-|  Servomotor  | Sail winch servos <br />(e.g.: [1](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Filter_wheel), [2](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Flip_mount) and [3](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Linear_stage)) |            Servo (out)             |    None     |
-|   AOM/AOTF   |     Omicron LH.AOM<br />AA Opto-Electronic AA.AOTF.6C/TN     | Analog (out):<br />PWM + low-pass  |     SCB     |
-| Flip-mirror  |                         Owis KSHM 40                         |             TTL (out)              |    None     |
-|    Sensor    | Focus stabilization ([link](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Focus-locking))<br />Laser powermeter ([link](https://github.com/ries-lab/RiesPieces/tree/master/Electronics/Powermeter)) |            Analog (in)             |     ACB     |
+|               Signal               |                            Device                            | Electronics |
+| :--------------------------------: | :----------------------------------------------------------: | :---------: |
+|            Camera (in)             |                   Photometrics Evolve 512                    |     SCB     |
+|            Camera (in)             | Hamamatsu ORCA-Flash4.0 V2,<br />ORCA-Quest and ORCA-Fusion BT<br />PCO edge 4.2 and 4.2bi<br />Andor iXon Ultra 897 |    None     |
+|            Camera (out)            |                  Hamamatsu ORCA-Flash4.0 V2                  |    None     |
+|        Laser trigger (out)         | Toptica iChrome MLE and iBeamSmart<br />Omicron LightHUB<br />Oxxius LBX-405<br /><br />LaserQuantum gem 561<br />MPB Communications F-04306-107 and F-04-306-102 |    None     |
+| Laser trigger (out)<br />PWM (out) | Custom laser engine ([link](https://github.com/ries-lab/LaserEngine)) |    None     |
+|             TTL (out)              |                         LED switches                         |    None     |
+|            Servo (out)             | Sail winch servos <br />(e.g.: [1](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Filter_wheel), [2](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Flip_mount) and [3](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Linear_stage)) |    None     |
+| Analog (out):<br />PWM + low-pass  |     Omicron LH.AOM<br />AA Opto-Electronic AA.AOTF.6C/TN     |     SCB     |
+|             TTL (out)              |                         Owis KSHM 40                         |    None     |
+|            Analog (in)             | Focus stabilization ([link](https://github.com/ries-lab/RiesPieces/tree/master/Microscopy/Focus-locking))<br />Laser powermeter ([link](https://github.com/ries-lab/RiesPieces/tree/master/Electronics/Powermeter)) |     ACB     |
 
 SCB: signal conversion board (see [electronics](resource1_electronics.md))
 
