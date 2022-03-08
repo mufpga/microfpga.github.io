@@ -14,7 +14,7 @@ Here, we provide two custom electronic boards to convert voltages to acceptable 
 
 ## Signal conversion board
 
-<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Signal_conversion_board/SCB.jpg" alt="AlchitryLoader" width="100"/>
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Signal_conversion_board/SCB.jpg" alt="SCB" width="100"/>
 
 #### Channels
 
@@ -64,7 +64,7 @@ The [signal conversion board folder](https://github.com/mufpga/MicroFPGA-electro
 
 ## Analog conversion board
 
-<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Analog_conversion_board/ACB.jpg" alt="AlchitryLoader" width="100"/>
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Analog_conversion_board/ACB.jpg" alt="ACB" width="100"/>
 
 #### Channels
 
@@ -104,8 +104,41 @@ Examples of applications are for instance monitoring the [laser power meters](ht
 
 The FPGA and the complementary boxes can be assembled into a complete box:
 
-<img src="img/box_small.jpg" alt="Complete MicroFPGA box" width="700"/>
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/Box.jpg" alt="Boards overview" width="700"/>
 
-This particular example is housed in [MicroFPGA electronics repository](https://github.com/mufpga/MicroFPGA-electronics).
+This particular example for the Au FPGA can be found in the [MicroFPGA electronics repository](https://github.com/mufpga/MicroFPGA-electronics).
 
-Both electronic boards and box side panels were designed by Christian Kieser (Electronic workshop, EMBL). 
+### Step-by-step
+
+In this section, we describe a rough step-by-step building of the FPGA box.  
+
+1. The box is 3D printed and contains an Au FPGA and a Br shield (Alchitry), a custom [FPGA shield](https://github.com/mufpga/MicroFPGA-electronics/tree/main/FPGA_shield), an [analog conversion board](https://github.com/mufpga/MicroFPGA-electronics/Analog_conversion_board), a  [signal conversion board](https://github.com/mufpga/MicroFPGA-electronics/Signal_conversion_board) and three panels ([1](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box_panel_1), [2](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box_panel_2) and [3](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box_panel_3)). The bill of materials for each custom board can be found in their respective folders. Additional parts list can be found [in the Box subfolder](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box). 
+   <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/1_boards.jpg" alt="Boards overview" width="600"/>
+2. The Br shield is mounted on top of the Au FPGA and secured using the metal spacing bolts (see previous picture).
+3. The FPGA shield will be mounted directly on top of the Br shield. The FPGA shield features connectors that ensure robust connection without possibility to invert GND and signal.
+   <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/2_shield.jpg" alt="FPGA shield" width="600"/>
+4. The jumpers are placed on the ACB channels to set the voltage conversion, for instance 0-10V to 0-1V with voltage and current limitation:
+   <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/3_ACB_jumpers.jpg" alt="ACB jumpers" width="600"/>
+5. The SCB does not feature jumpers but solder bridges instead. For each channel, the relevant bridges are therefore soldered, for instance 5V to 3.3V left to right:
+   <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/4_SCB_path_soldering.jpg" alt="SCB solder bridges" width="600"/>
+6. All panels and boards are then screwed on the 3D printed box (here without the FPGA shield).
+   <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/5_assembled_box.jpg" alt="Assembled box" width="600"/>
+7. Then, mount the FPGA shield:
+8. <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/6_mounted_shield.jpg" alt="FPGA shield" width="600"/>
+9. In order to connect the different boards, we used pre-made cables. The GND is not always used, as a single GND-GND connection between two boards is sufficient while any other GND-GND connection is redundant. This simplifies the cabling, preventing it from becoming too crowded.
+   <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/7_cable_bundles.jpg" alt="Cables" width="300"/>
+10. We then connect the boards to the power sources of [panel 3](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box_panel_3). At the time of the first connection, we recommend using a lab power supply that shows current and offers current protection. This allows powering each board step by step and watching the current consumption. Current consumption increasing significantly can be a sing of a soldering problem somewhere in the boards.
+    <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/8_power_supply.jpg" alt="Power supplies" width="800"/>
+11. We use the cables to wire the [second panel](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box_panel_2) to the ACB and the FPGA shield.
+    <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/9_panel2_connection.jpg" alt="Panel 2 connection" width="800"/>
+12. And the [first panel](https://github.com/mufpga/MicroFPGA-electronics/tree/main/Box_panel_1) to the SCB channels and the FPGA shield.
+    <img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/10_panel1_connection.jpg" alt="Panel 1 connection" width="800"/>
+13. Finally, we mount a heat sink on top of panel 3. The final box looks as follows:
+
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/11_final.jpg" alt="Final result" width="600"/>
+
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/12_final.jpg" alt="Final result" width="600"/>
+
+<img src="https://raw.githubusercontent.com/mufpga/MicroFPGA-electronics/main/Box/step_by_step/13_final.jpg" alt="Final result" width="600"/>
+
+All custom electronic boards and side panels were designed by Christian Kieser (Electronic workshop, EMBL). 
