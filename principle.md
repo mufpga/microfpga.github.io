@@ -3,7 +3,7 @@
 
 MicroFPGA is based on the Au, Au+ and Cu FPGAs from [Alchitry](https://alchitry.com/). Once configured, the FPGA is capable of generating a certain number of signals, as well as reading analog inputs (Au and Au+). It has been used with a [variety of devices](resource5_applications.md) on multiple microscopes.
 
-**SUMMARY FIGURE**
+<img src="img/figs/G_overview_sig.png" alt="Overview"/>
 
 The MicroFPGA project is split between multiple Github repositories:
 

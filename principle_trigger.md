@@ -26,8 +26,6 @@ MicroFPGA offers several laser trigger mode: OFF, ON, RISING, FALLING and FOLLOW
 |   FALLING    | **duration<br />sequence** | The laser is pulsed for **duration** &#956;s, on each **falling** edge |
 |    FOLLOW    |        **sequence**        |            The laser follows the exposure signal             |
 
-
-
 #### Trigger parameters
 
 | Parameter |  Range  |                         Description                          |
@@ -38,7 +36,11 @@ MicroFPGA offers several laser trigger mode: OFF, ON, RISING, FALLING and FOLLOW
 
 The **sequence** corresponds to a 16 bits number (0 to 65535) which encodes a trigger pattern in its bits sequence. MicroFPGA reads the binary number from the most-significant bit to the least significant one. If the bit is 1, then the laser will be triggered during the next camera exposure. If it is 0, it will not. The sequence is applied in **RISING**, **FALLING** and **CAMERA** modes. The lasers are synchronized, allowing alternating triggering. The sequence parameter is used to performa alternating triggers, where multiple lasers are triggered on different frames.
 
+<img src="img/figs/G_mode.png" alt="Laser trigger mode"/>
+
 #### Trigger sequence examples
+
+<img src="img/figs/G_sequence.png" alt="Laser trigger sequence"/>
 
 
 |                 Decimal                  |                 Binary                 |                     Description                     |
@@ -51,9 +53,11 @@ The **sequence** corresponds to a 16 bits number (0 to 65535) which encodes a tr
 
 Use a [binary-to-decimal converter](https://www.binaryhexconverter.com/binary-to-decimal-converter "One binary to decimal converter") to get the sequence right.
 
-## Camera triggering
+## Camera synchronization
 
 As mentionned above, MicroFPGA has two camera modes: PASSIVE and ACTIVE. In PASSIVE mode, the *exposure signal* is provided by an external camera, while in ACTIVE mode the FPGA generates its own *exposure signal* as well as a *fire signal* to directly trigger the camera.
+
+<img src="img/figs/G_active_passive.png" alt="Passive-Active sync"/>
 
 #### PASSIVE mode
 
@@ -67,7 +71,7 @@ ACTIVE mode is enabled with the camera mode parameter to 1. The FPGA then genera
 
 The *fire signal* is a periodic signal that starts with a short pulse, indicating the beginning of a frame. The *exposure signal* is synchronized with the *fire signal* and can be delayed with respect to it. It has a pulse length corresponding to the real camera exposure.
 
-**FIGURE HERE**
+<img src="img/figs/G_cam_parameters.png" alt="Active parameters"/>
 
 The ACTIVE mode has several parameters that allow users to define both *fire* and *exposure signals*: **period**, **pulse**, **exposure** and **delay**. 
 
@@ -78,7 +82,7 @@ The ACTIVE mode has several parameters that allow users to define both *fire* an
 | exposure  | exposure signal | 0-65535 | Length of the *exposure signal* up to 6553.5 ms (in steps of 0.1 ms) |
 |   delay   | exposure signal | 0-65535 | Delay between *fire* and *exposure signals*, rangin from 0 to 655.35 ms (in steps of 0.01 ms) |
 
-Note the followoing edge cases:
+Note the following edge cases:
 
 - If pulse > period: then the *fire signal* is high all the time, the *exposure signal* is unchanged.
 - if exposure+delay > period: then the effective exposure time is shortened so that it does not last beyond the duration of the period.
