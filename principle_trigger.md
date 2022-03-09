@@ -73,17 +73,15 @@ The *fire signal* is a periodic signal that starts with a short pulse, indicatin
 
 <img src="img/figs/G_cam_parameters.png" alt="Active parameters"/>
 
-The ACTIVE mode has several parameters that allow users to define both *fire* and *exposure signals*: **period**, **pulse**, **exposure** and **delay**. 
+The ACTIVE mode has several parameters that allow users to define both *fire* and *exposure signals*:  **pulse**, **delay,** **exposure** and **read-out**. 
 
-| Parameter |     Signal      |  Range  |                         Description                          |
-| :-------: | :-------------: | :-----: | :----------------------------------------------------------: |
-|  period   |   fire signal   | 0-65535 | Period of the *fire signal* ranging from 0 to 6553.5 ms (in steps of 0.1 ms) |
-|   pulse   |   fire signal   | 0-65535 | Pulse length of the *fire signal* up to 6553.5 ms (in steps of 0.1 ms) |
-| exposure  | exposure signal | 0-65535 | Length of the *exposure signal* up to 6553.5 ms (in steps of 0.1 ms) |
-|   delay   | exposure signal | 0-65535 | Delay between *fire* and *exposure signals*, rangin from 0 to 655.35 ms (in steps of 0.01 ms) |
+| Parameter |     Signal      |   Range   |                         Description                          |
+| :-------: | :-------------: | :-------: | :----------------------------------------------------------: |
+|   pulse   |   fire signal   | 0-1048575 |  Pulse length of the *fire signal* up to 1 s (steps of us)   |
+|   delay   | exposure signal |  0-65535  | Delay between *fire* and *exposure signals*, up to 65 ms (us steps) |
+| exposure  | exposure signal | 0-1048575 |   Length of the *exposure signal* up to 1 s (steps of us)    |
+|  readout  | exposure signal |  0-65535  | Delay between end of *exposure* and beginning of next *fire*, up to 65 ms (us steps) |
 
-Note the following edge cases:
+Note the following edge case:
 
-- If pulse > period: then the *fire signal* is high all the time, the *exposure signal* is unchanged.
-- if exposure+delay > period: then the effective exposure time is shortened so that it does not last beyond the duration of the period.
-- If delay > period: the *exposure signal* is low all the time.
+- If pulse > delay+exposure+read-out: then the *fire signal* is high all the time, the *exposure signal* is unchanged.
