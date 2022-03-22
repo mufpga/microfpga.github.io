@@ -85,3 +85,4 @@ The ACTIVE mode has several parameters that allow users to define both *fire* an
 Note the following edge case:
 
 - If pulse > delay+exposure+read-out: then the *fire signal* is high all the time, the *exposure signal* is unchanged.
+- If delay=read-out=0, then exposure is high all the time! The lasers will not be triggered, unless they are in ON or FOLLOW mode.
