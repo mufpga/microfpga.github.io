@@ -16,7 +16,13 @@ The laser trigger outputs are based on an *exposure signal* that is HIGH (>2V) w
 
 #### Trigger modes
 
-MicroFPGA offers several laser trigger mode: OFF, ON, RISING, FALLING and FOLLOW. Each mode processes the *exposure signal* differently. Additional parameters might influence the resulting *laser trigger signal* in some modes. The modes and their parameters are summarized in this table;
+MicroFPGA offers several laser trigger mode: OFF, ON, RISING, FALLING and FOLLOW. Each mode processes the *exposure signal* differently. Additional parameters might influence the resulting *laser trigger signal* in some modes. 
+
+<img src="img/figs/G_mode.png" alt="Laser trigger mode"/>
+
+
+
+The modes and their parameters are summarized in this table;
 
 | Trigger mode |         Parameters         |                         Description                          |
 | :----------: | :------------------------: | :----------------------------------------------------------: |
@@ -28,15 +34,13 @@ MicroFPGA offers several laser trigger mode: OFF, ON, RISING, FALLING and FOLLOW
 
 #### Trigger parameters
 
-| Parameter |  Range  |                         Description                          |
-| :-------: | :-----: | :----------------------------------------------------------: |
-|   mode    |   0-4   | Sets the laser trigger mode (0=OFF, 1=ON, 2=RISING, 3=FALLING and 4=FOLLOWING) |
-| duration  | 0-65535 | Duration of the pulse in &#956;s in RISING and FALLING modes, from 1&#956;s to 65,535 ms. |
-| sequence  | 0-65535 | Triggering pattern of 16 bits where each bit correspond to a frame, with the laser being triggered if the bit is 1. |
+| Parameter |   Range   |                         Description                          |
+| :-------: | :-------: | :----------------------------------------------------------: |
+|   mode    |    0-4    | Sets the laser trigger mode (0=OFF, 1=ON, 2=RISING, 3=FALLING and 4=FOLLOWING) |
+| duration  | 0-1048575 | Duration of the pulse in &#956;s in RISING and FALLING modes, from 1 &#956;s to 1 s. |
+| sequence  |  0-65535  | Triggering pattern of 16 bits where each bit correspond to a frame, with the laser being triggered if the bit is 1. |
 
 The **sequence** corresponds to a 16 bits number (0 to 65535) which encodes a trigger pattern in its bits sequence. MicroFPGA reads the binary number from the most-significant bit to the least significant one. If the bit is 1, then the laser will be triggered during the next camera exposure. If it is 0, it will not. The sequence is applied in **RISING**, **FALLING** and **CAMERA** modes. The lasers are synchronized, allowing alternating triggering. The sequence parameter is used to performa alternating triggers, where multiple lasers are triggered on different frames.
-
-<img src="img/figs/G_mode.png" alt="Laser trigger mode"/>
 
 #### Trigger sequence examples
 
