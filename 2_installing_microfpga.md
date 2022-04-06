@@ -4,7 +4,7 @@
 
 1. Download and install [AlchitryLabs](https://alchitry.com/alchitry-labs).
 
-3. Download the [MicroFPGA configuration](https://github.com/mufpga/MicroFPGA/releases/tag/v3) corresponding to your FPGA board (Au, Au+ or Cu).
+3. Download the [MicroFPGA configuration](https://github.com/mufpga/MicroFPGA/releases) corresponding to your FPGA board (Au, Au+ or Cu).
 
 3. Start AlchitryLoader, select the .bin file correponding to your FPGA, select the correct board type and click on "Program".
 
