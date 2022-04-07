@@ -57,6 +57,10 @@ The **sequence** corresponds to a 16 bits number (0 to 65535) which encodes a tr
 
 Use a [binary-to-decimal converter](https://www.binaryhexconverter.com/binary-to-decimal-converter "One binary to decimal converter") to get the sequence right.
 
+<img src="img/figs/alternating_illumination.gif" alt="Passive-Active sync"/>
+
+
+
 ## Camera synchronization
 
 As mentionned above, MicroFPGA has two camera modes: PASSIVE and ACTIVE. In PASSIVE mode, the *exposure signal* is provided by an external camera, while in ACTIVE mode the FPGA generates its own *exposure signal* as well as a *fire signal* to directly trigger the camera.
