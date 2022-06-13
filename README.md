@@ -23,13 +23,10 @@ Additionally, MicroFPGA can be used together with other projects:
 - [Ries lab repositories with compatible servomotor designs](https://github.com/ries-lab/RiesPieces)
 - [A custom LaserEngine triggered by MicroFPGA](https://github.com/ries-lab/LaserEngine)
 
-<!--- 
 
-### Cite us
-
-If you use MicroFPGA, please cite us:
-
- ---> 
+## Cite us
+Joran Deschamps, Christian Kieser, Philipp Hoess, Takahiro Deguchi, Jonas Ries, "MicroFPGA: an affordable FPGA platform for microscope control",
+bioRxiv 2022.06.07.495178.
 
 ### Contact
 
