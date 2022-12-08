@@ -1,6 +1,6 @@
 ## Change laser duration step
 
-Currently, the laser pulse duration is in microseconds. In order to change the step size, refer to the [laser_trigger.luc file](https://github.com/mufpga/MicroFPGA/blob/7908fc16b8069504b6fcd9e3213126e55c3c6d61/Au%2B/source/laser_trigger.luc#L40) of the firmware (line 40):
+Currently, the laser pulse duration is in microseconds. In order to change the step size, refer to the [laser_trigger.luc file](https://github.com/mufpga/MicroFPGA/blob/f8a2190763355563aa698f6f22a582752207a964/Au%2B/source/laser_trigger.luc#L40) of the firmware (line 40):
 
 ```verilog
 const NM_CYCLES = 100; // convert to ~us
@@ -29,15 +29,15 @@ The laser pulse duration is encoded by a 16 bits value. The maximum value is the
 2. In au_top.luc (line 180), change the bit depth to 32:
 
    ```verilog
-   duration.d[reg.regOut.address-ADDR_DUR] = reg.regOut.data[31:0]; 
+   duration.d[reg.regOut.address-ADDR_DUR] = reg.regOut.data[31:0];
    ```
-   
+
 3. In laser_trigger.luc (line 28), change the bit depth to 32:
 
    ```verilog
    input dura[32],
    ```
-   
+
 4. In laser_trigger.luc (line 47), adjust the bit depth of counter (see previous section):
 
    ```verilog
@@ -53,7 +53,7 @@ Now, the code on the user side should be changed to accept higher values, for in
 **Important note**: the error code for MicroFPGA is defined in au_plus_top.luc (line 97):
 
 ```verilog
-const ERROR_UNKNOW_COMMAND = 11206655; 
+const ERROR_UNKNOW_COMMAND = 11206655;
 ```
 
 When changing any parameter from 16 bits to 32 bits, reading out the parameter value while it is equal to 11206655 will cause the Micro-Manager device adapter or the Java and Python libraries to produce an error. Indeed, this value will be interpreted as an wrong address request.

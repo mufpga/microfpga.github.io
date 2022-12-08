@@ -1,7 +1,7 @@
 ## Change PWM period
 
 The PWM period is 1.3 ms by default (about 770 Hz). In order to change the period,
-you can just adjust the values in line 138 of `au_plus_top.luc` (or corresponding for the
+you can just adjust the values in line 138 of [au_plus_top.luc](https://github.com/mufpga/MicroFPGA/blob/f8a2190763355563aa698f6f22a582752207a964/Au%2B/source/au_plus_top.luc#L138) (or corresponding line for the
 Cu FPGA):
 
 ```verilog
