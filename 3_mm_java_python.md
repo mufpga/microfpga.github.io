@@ -6,11 +6,15 @@ MicroFPGA device adapter is available directly from Micro-Manager.
 2. In the "Devices" menu, choose "Hardware Configuration Wizard...".
 3. Create a new configuration or modify an existing one.
 4. In the hardware list, find "MicroFPGA" and double click on the device adapter.
-5. Select the relevant COMport and enter the baudrate (the default baudrate is 57600). Click ok.
+5. Select the relevant COMport and enter the baud-rate (**57600**). Click ok.
 6. In the windows that opens, select the signals you want to use. Click next.
 7. For each signal, select the number of channels. Click ok.
 8. Save the new hardware configuration.
 9. In the device property browser, available from the "Devices" menu, you have access to all properties from MicroFPGA.
+
+> **Important**: The default baud-rate is **57600**. A wrong baud-rate will prevent
+> communication with MicroFPGA.
+
 
 # Java
 
@@ -31,7 +35,7 @@ The Java library is provided as a Maven project. In the following step we show h
 
 5. In the Maven folder, double-click on "Existing Maven Projects".
 
-6. Click on "Browse" and navigate to the "MicroFPGA-Java" folder in the local git repository. 
+6. Click on "Browse" and navigate to the "MicroFPGA-Java" folder in the local git repository.
 
 7. A "pom.xml" file should be automatically detected. Click on Finish.
 
